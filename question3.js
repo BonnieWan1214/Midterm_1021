@@ -24,26 +24,19 @@ CHALLENGE (SAVE FOR LAST):
 Plan
 Create a function that simulates a lunch money management system for students.
 
+
 1. if (the student has enough money to buy lunch) = [student name] purchased [lunch item] purchased!
 enough money: amount of lunch money > lunch item costs
-2. else if lunchcost-lunchmoney < 5 = "Warning: Low balance!"
-3. else if lunchcost-lunchmoney === 0 = "Balance depleted! Please add more funds."
-4.. else = [student name] does not have sufficient funds to buy [lunch item]!
+2. else = [student name] does not have sufficient funds to buy [lunch item]!
 Don't have enough money: amount of lunch money < lunch item costs
 
 
  */
 
 //determine a proper function name and parameter variable name
-function lunchmoneymanagementsystem(_name, lunchmoney, _itemname, lunchcost){
+function lunchmoneymanagementsystem(_studentname, lunchmoney, _lunchitem, lunchcost){
   if (lunchmoney > lunchcost ){
     console.log("[student name] purchased [lunch item] purchased!");
-  }
-  else if( lunchcost-lunchmoney < 5){
-    console.log("Warning: Low balance");
-  }
-  else if( lunchcost-lunchmoney === 0){
-    console.log("Balance depleted! Please add more funds.");
   }
   else{
     console.log("[student name] does not have sufficient funds to buy [lunch item]");
@@ -60,7 +53,7 @@ function StartApp(){
       const lunchcost = Number(_lunchcost); 
 
           //call your function here.
-          function lunchmoneymanagementsystem(_name, lunchmoney, _itemname, lunchcost)
+          function lunchmoneymanagementsystem(_studentname, lunchmoney, _lunchitem, lunchcost)
           // readline.close();
           if(_lunchcost !== "quit"){
             StartApp();

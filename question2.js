@@ -22,6 +22,8 @@ CHALLENGE (SAVE FOR LAST):
 Plan
 
 Create a function that simulates a student midterm exam grading system.
+[Student Name]=studentname
+studentscore= score
 
 1. if score >= 86 "Excellent! [Student Name] has an A."
 2. else if score >= 73 <= 85  "Great job! [Student Name] has a B."
@@ -55,7 +57,7 @@ function examgradingsystem(studentname,score){
 
 function StartApp(){
   readline.question('What is student name ?', _name => {
-    studentname="_name";
+    studentname=("_name");
     readline.question('What is student name score ?', _score => {
       const score = Number(_score); 
 
